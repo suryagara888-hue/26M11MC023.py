@@ -1,0 +1,95 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNsyniTRkjvwT/56mugVxM6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/suryagara888-hue/26M11MC023.py/blob/main/26M11MC024.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N8dJNxpUORWv",
+        "outputId": "85f6620b-8670-429e-80a6-26e9d7bca7a7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Repeated words found: ['is']\n"
+          ]
+        }
+      ],
+      "source": [
+        "import re\n",
+        "text = \"This is is a simple text of regex\"\n",
+        "pattern = r\"\\b(\\w+)\\s+\\1\\b\"\n",
+        "repeats = re.findall(pattern, text, flags=re.IGNORECASE)\n",
+        "print(\"Repeated words found:\", repeats)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "KMogt9tyWEaA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import re\n",
+        "pattern = r\"^[\\w.+-]+@[w-]+\\.[a-zA-Z]{2,}$\"\n",
+        "def is_valid_email(email):\n",
+        "    return bool(re.match(pattern, email))\n",
+        "print(is_valid_email(\"surya.@college.com\"))\n",
+        "print(is_valid_email(\"sai-email@@x\"))\n",
+        "print(is_valid_email(\"yes-at-symbol.com\"))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NZaH9W1SWJJ1",
+        "outputId": "59653a1d-16b5-4ac3-a777-5b4a6b3f4e87"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
